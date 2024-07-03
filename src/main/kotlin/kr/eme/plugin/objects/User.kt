@@ -1,9 +1,9 @@
 package kr.eme.plugin.objects
 
-import java.util.UUID
+import java.util.*
 
 data class User(
-    val name: String,
     val uuid: UUID,
-    val money: Int
+    val name: String = "",
+    val money: Int = 0
 )
