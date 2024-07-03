@@ -1,4 +1,4 @@
-package listener
+package kr.eme.plugin.listener
 
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
