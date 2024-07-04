@@ -15,7 +15,7 @@ object ChequeListener : Listener {
         val player = event.player
         val item: ItemStack = event.item ?: return
 
-        if (item.type != Material.PAPER && item.itemMeta?.hasCustomModelData() == true) {
+        if (item.type != Material.AIR && item.itemMeta?.hasCustomModelData() == true) {
             val amount = item.itemMeta!!.customModelData
             val uuid = player.uniqueId
 
