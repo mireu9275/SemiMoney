@@ -32,7 +32,12 @@ object FileManager {
      */
     fun saveUserData(user: User) {
         val users = loadAllUsers().toMutableList()
-        users.add(user)
+        val existingUserIndex = users.indexOfFirst { it.uuid == user.uuid }
+        if (existingUserIndex != -1) {
+            users[existingUserIndex] = user // 기존 유저 업데이트
+        } else {
+            users.add(user)     //신규 유저 추가
+        }
         val data = users.map { userToMap(it) }
         file.writeText(yaml.dump(data))
     }
