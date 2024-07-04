@@ -5,5 +5,5 @@ import java.util.*
 data class User(
     val uuid: UUID,
     var name: String = "",
-    val money: Int = 0
+    var money: Int = 0
 )
