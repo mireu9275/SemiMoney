@@ -31,7 +31,7 @@ object MoneyCommand : CommandExecutor {
         }
         //money 만 입력했을 경우...
         if (args.isEmpty()) {
-
+            getUserMoney(sender)
             return true
         }
         return true
