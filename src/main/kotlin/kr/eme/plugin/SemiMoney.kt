@@ -15,7 +15,7 @@ class SemiMoney: JavaPlugin() {
         //FileManager 에 DataFolder 전달
         FileManager.init(dataFolder)
         //모든 User 의 정보를 불러옴
-        FileManager.loadAllUsers()
+        UserManager.loadAllUsers()
         //이벤트 리스너 등록
         registerEvents()
         //커맨드 등록
