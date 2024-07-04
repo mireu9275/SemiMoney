@@ -1,6 +1,8 @@
 package kr.eme.plugin;
 
+import kr.eme.plugin.commands.ChequeCommand
 import kr.eme.plugin.commands.MoneyCommand
+import kr.eme.plugin.listener.ChequeListener
 import kr.eme.plugin.listener.MoneyListener
 import kr.eme.plugin.managers.FileManager
 import kr.eme.plugin.managers.UserManager
@@ -15,14 +17,24 @@ class SemiMoney: JavaPlugin() {
         //모든 User 의 정보를 불러옴
         FileManager.loadAllUsers()
         //이벤트 리스너 등록
-        server.pluginManager.registerEvents(MoneyListener, this)
+        registerEvents()
         //커맨드 등록
-        getCommand("MoneyCommand")?.setExecutor(MoneyCommand)
+        registerCommands()
         logger.info("Server enable!")
     }
     override fun onDisable() {
         UserManager.saveAllUsers()
         logger.info("Server disable!")
+    }
+
+    private fun registerEvents() {
+        server.pluginManager.registerEvents(MoneyListener, this)
+        server.pluginManager.registerEvents(ChequeListener, this)
+    }
+
+    private fun registerCommands() {
+        getCommand("money")?.setExecutor(MoneyCommand)
+        getCommand("cheque")?.setExecutor(ChequeCommand)
     }
 
     private fun test() {
