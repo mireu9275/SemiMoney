@@ -1,12 +1,13 @@
 package kr.eme.plugin.commands
 
+import kr.eme.plugin.managers.MoneyManager
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import org.bukkit.command.TabExecutor
 import org.bukkit.entity.Player
 
 
-object MoneyCommand : TabExecutor {
+object MoneyCommand : CommandExecutor {
     /**
      * On command
      *
@@ -23,33 +24,26 @@ object MoneyCommand : TabExecutor {
         label: String,
         args: Array<out String>
     ): Boolean {
+        //sender 가 플레이어가 아닐 경우...
         if (sender !is Player) {
             sender.sendMessage("콘솔에서는 이 명령어를 사용할 수 없습니다.")
+            return true
+        }
+        //money 만 입력했을 경우...
+        if (args.isEmpty()) {
+
             return true
         }
         return true
     }
 
     /**
-     * On tab complete
+     * Get user money
      *
-     * 커맨드 입력 후 Tab 키를 눌렀을 시
-     * @param sender
-     * @param command
-     * @param alias
-     * @param args
-     * @return
+     * @param player
      */
-    override fun onTabComplete(
-        sender: CommandSender,
-        command: Command,
-        alias: String,
-        args: Array<out String>
-    ): MutableList<String>? {
-        return if (args.size == 1) {
-            mutableListOf("","","")
-        } else {
-            null
-        }
+    private fun getUserMoney(player: Player) {
+        val money = MoneyManager.getMoney(player.uniqueId) ?: 0
+        player.sendMessage("${player.name} 님의 소지금은 $money 원 입니다.")
     }
 }
