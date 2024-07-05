@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.23"
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("maven-publish")
 }
 
 group = "kr.eme.semiMoney"
@@ -8,6 +9,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven("https://repo.papermc.io/repository/maven-public/")
 }
 
@@ -37,5 +39,16 @@ tasks.shadowJar {
     destinationDirectory = file("D:\\minecraft\\1. 버킷 관련\\1.20.2 paper_dev2\\plugins")
     manifest {
         attributes["main-class"] = "kr.eme.semiMoney.SemiMoney"
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "kr.eme.semiMoney"
+            artifactId = project.name
+            version = project.version.toString()
+            from(components["kotlin"])
+        }
     }
 }
