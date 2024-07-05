@@ -58,7 +58,7 @@ object MoneyManager {
             player.sendMessage("금액은 0보다 커야 합니다!")
             return false
         }
-        if (user.money <= amount) return false
+        if (user.money < amount) return false
         user.money -= amount
         return true
     }

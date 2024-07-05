@@ -9,4 +9,3 @@ commands:
   cheque:
     usage: /cheque
     aliases: 수표
-z
