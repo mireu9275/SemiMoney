@@ -1,8 +1,8 @@
-package kr.eme.plugin.listener
+package kr.eme.semiMoney.listener
 
-import kr.eme.plugin.managers.FileManager
-import kr.eme.plugin.managers.UserManager
-import kr.eme.plugin.objects.User
+import kr.eme.semiMoney.managers.FileManager
+import kr.eme.semiMoney.managers.UserManager
+import kr.eme.semiMoney.objects.User
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent

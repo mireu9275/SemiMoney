@@ -1,6 +1,6 @@
-package kr.eme.plugin.managers
+package kr.eme.semiMoney.managers
 
-import kr.eme.plugin.objects.User
+import kr.eme.semiMoney.objects.User
 import java.util.*
 
 object UserManager {

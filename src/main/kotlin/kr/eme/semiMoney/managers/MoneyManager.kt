@@ -1,4 +1,4 @@
-package kr.eme.plugin.managers
+package kr.eme.semiMoney.managers
 
 import org.bukkit.Bukkit
 import java.util.*

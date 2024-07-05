@@ -1,6 +1,6 @@
-package kr.eme.plugin.commands
+package kr.eme.semiMoney.commands
 
-import kr.eme.plugin.managers.MoneyManager
+import kr.eme.semiMoney.managers.MoneyManager
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender

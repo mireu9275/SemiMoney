@@ -1,4 +1,4 @@
-package kr.eme.plugin.objects
+package kr.eme.semiMoney.objects
 
 import java.util.*
 

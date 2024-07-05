@@ -1,6 +1,6 @@
-package kr.eme.plugin.listener
+package kr.eme.semiMoney.listener
 
-import kr.eme.plugin.managers.MoneyManager
+import kr.eme.semiMoney.managers.MoneyManager
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener

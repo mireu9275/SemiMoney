@@ -1,12 +1,12 @@
-package kr.eme.plugin;
+package kr.eme.semiMoney;
 
-import kr.eme.plugin.commands.ChequeCommand
-import kr.eme.plugin.commands.MoneyCommand
-import kr.eme.plugin.listener.ChequeListener
-import kr.eme.plugin.listener.MoneyListener
-import kr.eme.plugin.managers.FileManager
-import kr.eme.plugin.managers.UserManager
-import kr.eme.plugin.objects.User
+import kr.eme.semiMoney.commands.ChequeCommand
+import kr.eme.semiMoney.commands.MoneyCommand
+import kr.eme.semiMoney.listener.ChequeListener
+import kr.eme.semiMoney.listener.MoneyListener
+import kr.eme.semiMoney.managers.FileManager
+import kr.eme.semiMoney.managers.UserManager
+import kr.eme.semiMoney.objects.User
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.*
 

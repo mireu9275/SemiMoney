@@ -1,5 +1,5 @@
 name: SemiMoney
-main: kr.eme.plugin.SemiMoney
+main: kr.eme.semiMoney.SemiMoney
 version: 1.0
 api-version: 1.20
 commands:
@@ -9,3 +9,4 @@ commands:
   cheque:
     usage: /cheque
     aliases: 수표
+z

@@ -3,7 +3,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "kr.eme.plugin"
+group = "kr.eme.semiMoney"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -28,7 +28,7 @@ kotlin {
 //    archiveFileName = "${project.name}-${project.version}.jar"
 //    destinationDirectory = file("D:\\minecraft\\1. 버킷 관련\\1.20.2 paper_dev2\\plugins")
 //    manifest {
-//        attributes["main-class"] = "kr.eme.plugin.SemiMoney"
+//        attributes["main-class"] = "kr.eme.semiMoney.SemiMoney"
 //    }
 //}
 
@@ -36,6 +36,6 @@ tasks.shadowJar {
     archiveFileName = "${project.name}-${project.version}.jar"
     destinationDirectory = file("D:\\minecraft\\1. 버킷 관련\\1.20.2 paper_dev2\\plugins")
     manifest {
-        attributes["main-class"] = "kr.eme.plugin.SemiMoney"
+        attributes["main-class"] = "kr.eme.semiMoney.SemiMoney"
     }
 }
