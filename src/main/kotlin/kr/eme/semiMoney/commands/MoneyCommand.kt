@@ -44,6 +44,6 @@ object MoneyCommand : CommandExecutor {
      */
     private fun getUserMoney(player: Player) {
         val money = MoneyManager.getMoney(player.uniqueId) ?: 0
-        player.sendMessage("${player.name} 님의 소지금은 $money 원 입니다.")
+        player.sendMessage("${player.name} 님의 소지금은 $money EP 입니다.")
     }
 }

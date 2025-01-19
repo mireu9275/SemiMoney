@@ -11,6 +11,7 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven("https://repo.papermc.io/repository/maven-public/")
+    maven { url = uri("file://${rootProject.projectDir}/local-repo")} // 로컬 저장소 경로 지정
 }
 
 dependencies {

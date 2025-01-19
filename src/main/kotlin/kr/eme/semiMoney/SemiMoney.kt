@@ -5,6 +5,7 @@ import kr.eme.semiMoney.commands.MoneyCommand
 import kr.eme.semiMoney.listener.ChequeListener
 import kr.eme.semiMoney.listener.MoneyListener
 import kr.eme.semiMoney.managers.FileManager
+import kr.eme.semiMoney.managers.MoneyManager
 import kr.eme.semiMoney.managers.UserManager
 import kr.eme.semiMoney.objects.User
 import org.bukkit.plugin.java.JavaPlugin
@@ -12,6 +13,7 @@ import java.util.*
 
 class SemiMoney: JavaPlugin() {
     override fun onEnable() {
+        main = this
         //FileManager 에 DataFolder 전달
         FileManager.init(dataFolder)
         //모든 User 의 정보를 불러옴
@@ -40,6 +42,11 @@ class SemiMoney: JavaPlugin() {
     private fun test() {
         val user = User(uuid = UUID.randomUUID(), name = "TestPlayer1", money = 1000)
         FileManager.saveUserData(user)
+    }
+
+    // MoneyManager API 제공
+    fun getMoneyManager(): MoneyManager {
+        return MoneyManager
     }
 
 }
